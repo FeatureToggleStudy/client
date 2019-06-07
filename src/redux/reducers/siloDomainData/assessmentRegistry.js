@@ -53,6 +53,7 @@ const setArys = (state, action) => {
 
 const aryViewSetFilter = (state, action) => {
     const { filters } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         aryPage: {
@@ -66,6 +67,7 @@ const aryViewSetFilter = (state, action) => {
 };
 
 const aryViewUnsetFilter = (state) => {
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         aryPage: {
@@ -93,6 +95,7 @@ const aryViewSetActivePage = (state, action) => {
 
 const aryViewSetActiveSort = (state, action) => {
     const { activeSort } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         aryPage: {

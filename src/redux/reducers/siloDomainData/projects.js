@@ -301,6 +301,7 @@ export const unsetProject = (state, action) => {
         projectId,
         newActiveProjectId,
     } = action;
+    // FIXME: writing dual state
     const settings = {
         projectsView: { $auto: {
             $unset: [projectId],

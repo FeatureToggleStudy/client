@@ -37,6 +37,7 @@ export const setCeDetailAction = ({ ceId, ceDetail }) => ({
 const setCategoryEditors = (state, action) => {
     const { categoryEditors } = action;
 
+    // FIXME: reading state
     const keysOfState = Object.keys(state.categoryEditors);
     // Get keys to be removed
     // NOTE: Remove all keys except those to be merged
@@ -80,6 +81,7 @@ const addNewCe = (state, action) => {
         } },
     };
     // TODO: Remove this if not used
+    // FIXME: writing dual state
     settings.projects = {
         [projectId]: { $auto: {
             categoryEditor: {

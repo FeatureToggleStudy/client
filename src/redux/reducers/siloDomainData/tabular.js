@@ -60,6 +60,7 @@ const setTabularData = (state, action) => {
 const patchTabularFields = (state, action) => {
     const { bookId, fields } = action;
 
+    // FIXME: reading state
     const {
         tabularView: {
             [bookId]: {

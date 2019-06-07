@@ -61,6 +61,7 @@ const setRouteParams = (state, action) => {
         // NOTE: once isFirstPage is set to false, it cannot be set to true
         // NOTE: do this because when we use
         // window.location.replace() it clears the key in location
+        // FIXME: reading state
         isFirstPage: state.isFirstPage && isFirstPage,
     };
     return newState;

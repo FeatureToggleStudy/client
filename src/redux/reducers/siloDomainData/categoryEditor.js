@@ -226,6 +226,7 @@ const ceAddNewCategory = (state, action) => {
 
 const ceRemoveCategory = (state, action) => {
     const { categoryEditorId, id } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -266,6 +267,7 @@ const ceRemoveCategory = (state, action) => {
 
 const ceSetCategory = (state, action) => {
     const { categoryEditorId, id, values } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -309,6 +311,7 @@ const ceSetActiveCategoryId = (state, action) => {
 
 const ceUpdateSelectedSubcategories = (state, action) => {
     const { categoryEditorId, level, subcategoryId } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -347,6 +350,7 @@ const ceUpdateSelectedSubcategories = (state, action) => {
 
 const ceAddNewSubcategory = (state, action) => {
     const { categoryEditorId, level, id, title, description = '' } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -403,6 +407,7 @@ const ceAddNewSubcategory = (state, action) => {
 
 const ceUpdateSelectedSubcategory = (state, action) => {
     const { categoryEditorId, title, description, ngrams, subcategories } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -449,6 +454,7 @@ const ceUpdateSelectedSubcategory = (state, action) => {
 
 const ceRemoveSelectedSubcategory = (state, action) => {
     const { categoryEditorId } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -519,6 +525,7 @@ const ceRemoveSubcategoryNGram = (state, action) => {
         categoryEditorId,
         ngram: { n: ngramN, keyword: ngramKeyword },
     } = action;
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -575,6 +582,7 @@ const ceAddManualSubcategoryNGram = (state, action) => {
         return state;
     }
 
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {
@@ -651,6 +659,7 @@ const ceAddSubcategoryNGram = (state, action) => {
     if (ngramN <= 0) {
         return state;
     }
+    // FIXME: reading state
     const {
         categoryEditorView: {
             [categoryEditorId]: {

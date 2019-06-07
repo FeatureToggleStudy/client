@@ -115,6 +115,7 @@ const setSelectedLinkCollectionName = (state, action) => {
 // LINK CHANGE
 
 const editLinkChange = (state, action) => {
+    // FIXME: reading state
     const {
         stringManagementView: { languageChanges },
     } = state;
@@ -167,6 +168,7 @@ const addLinkChange = editLinkChange;
 
 const removeLinkChange = (state, action) => {
     const { key, languageName, linkCollectionName } = action;
+    // FIXME: reading state
     const { stringManagementView: { languageChanges } } = state;
 
     let index = -1;
@@ -202,6 +204,7 @@ const removeLinkChange = (state, action) => {
 // STRING CHANGE
 
 const editStringChange = (state, action) => {
+    // FIXME: reading state
     const {
         stringManagementView: { languageChanges },
     } = state;
@@ -250,6 +253,7 @@ const addStringChange = editStringChange;
 
 const removeStringChange = (state, action) => {
     const { id, languageName } = action;
+    // FIXME: reading state
     const { stringManagementView: { languageChanges } } = state;
 
     let index = -1;

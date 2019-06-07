@@ -185,6 +185,7 @@ const setLead = (state, action) => {
 
 const setEntries = (state, action) => {
     const { leadId, entryActions } = action;
+    // FIXME: reading state
     const {
         editEntries: {
             [leadId]: {
@@ -210,6 +211,7 @@ const setEntries = (state, action) => {
 
 const updateEntriesBulk = (state, action) => {
     const { leadId, bulkData } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -277,6 +279,7 @@ const setSelectedEntryKey = (state, action) => {
 
 const setEntryExcerpt = (state, action) => {
     const { leadId, key, excerptType, excerptValue } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -311,6 +314,7 @@ const setEntryExcerpt = (state, action) => {
 
 const addEntry = (state, action) => {
     const { entry, leadId } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -370,6 +374,7 @@ const addEntry = (state, action) => {
 
 const setEntryData = (state, action) => {
     const { leadId, key, values, errors, info, color } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -438,6 +443,7 @@ const setEntryData = (state, action) => {
 
 const setEntryError = (state, action) => {
     const { leadId, key, errors, isServerError } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -490,6 +496,7 @@ const removeEntry = (state, action) => {
 
 const markAsDeletedEntry = (state, action) => {
     const { leadId, key, value } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [], selectedEntryKey } = {} } = {},
     } = state;
@@ -538,6 +545,7 @@ const markAsDeletedEntry = (state, action) => {
 const applyToAllEntries = mode => (state, action) => {
     // attribute key and value
     const { leadId, key, value, entryKey, modifiable } = action;
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -664,6 +672,7 @@ const saveEntry = (state, action) => {
         color,
     });
 
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;
@@ -696,6 +705,7 @@ const editEntriesResetUiState = (state, { leadId }) => {
 };
 
 const formatAllEntries = (state, { leadId, modifiable }) => {
+    // FIXME: reading state
     const {
         editEntries: { [leadId]: { entries = [] } = {} } = {},
     } = state;

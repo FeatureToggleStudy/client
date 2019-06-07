@@ -53,6 +53,7 @@ const setLeadGroups = (state, action) => {
 
 const leadGroupsViewSetFilter = (state, action) => {
     const { filters } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         leadGroupsView: {
@@ -66,6 +67,7 @@ const leadGroupsViewSetFilter = (state, action) => {
 };
 
 const leadGroupsViewUnsetFilter = (state) => {
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         leadGroupsView: {
@@ -80,6 +82,7 @@ const leadGroupsViewUnsetFilter = (state) => {
 
 const leadGroupsViewSetActivePage = (state, action) => {
     const { activePage } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         leadGroupsView: {
@@ -93,6 +96,7 @@ const leadGroupsViewSetActivePage = (state, action) => {
 
 const leadGroupsViewSetActiveSort = (state, action) => {
     const { activeSort } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         leadGroupsView: {

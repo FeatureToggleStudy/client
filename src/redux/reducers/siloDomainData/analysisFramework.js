@@ -128,6 +128,7 @@ const getWidgets = (analysisFrameworkView = {}, analysisFrameworkId) => (
 
 const afViewRemoveWidget = (state, action) => {
     const { analysisFrameworkId, widgetId } = action;
+    // FIXME: reading state
     const conditionalWidgets = getWidgets(state.analysisFrameworkView, analysisFrameworkId)
         .map((widgets, index) => ({
             ...widgets,
@@ -192,6 +193,7 @@ const afViewRemoveWidget = (state, action) => {
 
 const afViewUpdateWidget = (state, action) => {
     const { analysisFrameworkId, widget } = action;
+    // FIXME: reading state
     const { analysisFrameworkView: { [analysisFrameworkId]: { data: analysisFramework } } } = state;
 
     const existingWidgets = analysisFramework.widgets;
@@ -225,6 +227,7 @@ const afViewUpdateWidgetLayout = (state, action) => {
         layout,
     } = action;
 
+    // FIXME: reading state
     const { analysisFrameworkView: { [analysisFrameworkId]: { data: analysisFramework } } } = state;
 
     const existingWidgets = analysisFramework.widgets;

@@ -71,6 +71,7 @@ const setUserGroups = (state, action) => {
     };
 
     if (userId) {
+        // FIXME: writing dual state
         settings.users = {
             [userId]: { $auto: {
                 userGroups: { $autoArray: {
@@ -109,6 +110,7 @@ const unsetUserGroup = (state, action) => {
 const setUsersMembership = (state, action) => {
     const { userGroupId, usersMembership } = action;
 
+    // FIXME: reading state
     const memberships = ((state.userGroups[userGroupId] || {}).memberships || []);
     const newUsersMemberShip = usersMembership.filter(
         userMembership => (
@@ -131,6 +133,7 @@ const setUsersMembership = (state, action) => {
 const setUserMembership = (state, action) => {
     const { userGroupId, userMembership } = action;
 
+    // FIXME: reading state
     const memberships = ((state.userGroups[userGroupId] || {}).memberships || []);
     const updatedUsersMemberShipIndex = memberships.findIndex(
         membership => (userMembership.id === membership.id),
@@ -153,6 +156,7 @@ const setUserMembership = (state, action) => {
 const unsetUserMembership = (state, action) => {
     const { userGroupId, membershipId } = action;
 
+    // FIXME: reading state
     const memberships = ((state.userGroups[userGroupId] || {}).memberships || []);
     const groupMembershipArrayIndex = memberships.findIndex(
         membership => (membership.id === membershipId),

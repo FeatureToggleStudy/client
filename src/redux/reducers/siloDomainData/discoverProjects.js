@@ -72,6 +72,7 @@ const setProjects = (state, action) => {
 };
 
 const setProjectJoin = (state, action) => {
+    // FIXME: reading state
     const { discoverProjectsView: { projectList = [] } } = state;
     const { projectId, isJoining } = action;
 

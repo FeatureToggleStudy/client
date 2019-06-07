@@ -55,6 +55,7 @@ const setAnalysisFramework = (state, action) => {
 const setAnalysisFrameworks = (state, action) => {
     const { analysisFrameworks } = action;
 
+    // FIXME: reading state
     const keysOfState = Object.keys(state.analysisFrameworks);
     // Get keys to be removed
     // NOTE: Remove all keys except those to be merged
@@ -97,6 +98,7 @@ const addNewAf = (state, action) => {
             } },
         } },
     };
+    // FIXME: writing dual state
     // TODO: Remove this if not used
     settings.projects = {
         [projectId]: { $auto: {

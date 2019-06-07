@@ -166,6 +166,7 @@ export const addLeadViewSetConnectorsAction = ({ connectors, projectId }) => ({
 
 // NOTE: if leadIndices is not defined, iterates over all leads
 const setErrorForLeads = (state, leadIndices) => {
+    // FIXME: reading state
     const { addLeadView: { leads } } = state;
 
     const newLeadIndices = !leadIndices
@@ -228,6 +229,7 @@ const addLeadViewSetActiveLead = (state, action) => {
 };
 
 const addLeadViewPrevLead = (state) => {
+    // FIXME: reading state
     const { addLeadView: { leads, activeLeadId } } = state;
 
     const leadIndex = leads.findIndex(
@@ -248,6 +250,7 @@ const addLeadViewPrevLead = (state) => {
 };
 
 const addLeadViewNextLead = (state) => {
+    // FIXME: reading state
     const { addLeadView: { leads, activeLeadId } } = state;
 
     const leadIndex = leads.findIndex(
@@ -268,6 +271,7 @@ const addLeadViewNextLead = (state) => {
 };
 
 const addLeadViewRemoveLead = (state, action) => {
+    // FIXME: reading state
     const { addLeadView: { leads, activeLeadId } } = state;
 
     const { leadIds } = action;
@@ -302,6 +306,7 @@ const addLeadViewRemoveLead = (state, action) => {
 };
 
 const addLeadViewRemoveSavedLeads = (state) => {
+    // FIXME: reading state
     const { addLeadView: { activeLeadId } } = state;
 
     // Remove all saved
@@ -383,6 +388,7 @@ const addLeadViewAddNewLeads = (state, action) => {
 // Complex reducers below this point
 
 const addLeadViewChangeLead = (state, action) => {
+    // FIXME: reading state
     const { addLeadView: { leads } } = state;
     const {
         leadId,
@@ -427,6 +433,7 @@ const addLeadViewChangeLead = (state, action) => {
 };
 
 const addLeadViewCopyAll = behavior => (state, action) => {
+    // FIXME: reading state
     const { addLeadView: { leads } } = state;
     const {
         leadId,
@@ -474,6 +481,7 @@ const addLeadViewCopyAll = behavior => (state, action) => {
 };
 
 const addLeadViewSaveLead = (state, action) => {
+    // FIXME: reading state
     const { addLeadView: { leads } } = state;
     const {
         leadId,
@@ -553,6 +561,7 @@ const addLeadViewSetRemoveModalState = (state, action) => {
     };
     return update(state, settings);
 };
+
 const addLeadViewUnsetRemoveModalState = (state) => {
     const settings = {
         addLeadView: {

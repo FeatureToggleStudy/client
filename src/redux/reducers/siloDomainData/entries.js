@@ -52,6 +52,7 @@ const setEntries = (state, action) => {
 
 const entryViewSetFilter = (state, action) => {
     const { filters } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         entriesView: { $auto: {
@@ -65,6 +66,7 @@ const entryViewSetFilter = (state, action) => {
 };
 
 const entryViewUnsetFilter = (state) => {
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         entriesView: {
@@ -79,6 +81,7 @@ const entryViewUnsetFilter = (state) => {
 
 const entriesViewSetActivePage = (state, action) => {
     const { activePage } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         entriesView: {

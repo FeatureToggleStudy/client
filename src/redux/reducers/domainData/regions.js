@@ -106,6 +106,7 @@ const removeProjectRegion = (state, action) => {
     const { projectId, regionId } = action;
 
     const settings = {};
+    // FIXME: reading state
     const index = ((state.projects[projectId] || {}).regions
         || []).findIndex(d => (d.id === regionId));
 
@@ -131,8 +132,10 @@ const addNewRegion = (state, action) => {
     };
 
     if (projectId) {
+        // FIXME: reading state
         const index = ((state.projects[projectId] || {}).regions
             || []).findIndex(d => (d.id === regionDetail.id));
+        // FIXME: writing dual state
         if (index === -1) {
             settings.projects = {
                 [projectId]: { $auto: {
@@ -187,6 +190,7 @@ const setRegionsForProject = (state, action) => {
 
 const addAdminLevelForRegion = (state, action) => {
     const { adminLevel, regionId } = action;
+    // FIXME: reading state
     const index = (state.adminLevels[regionId]
         || []).findIndex(d => (d.id === adminLevel.id));
 
@@ -225,6 +229,7 @@ const setRegionDetails = (state, action) => {
         },
     };
     if (projectId) {
+        // FIXME: reading state
         const index = ((state.projects[projectId] || {}).regions
             || []).findIndex(d => (d.id === regionId));
         if (index !== -1) {
@@ -244,6 +249,7 @@ const setRegionDetails = (state, action) => {
 
 const removeAdminLevelForRegion = (state, action) => {
     const { adminLevelId, regionId } = action;
+    // FIXME: reading state
     const index = (state.adminLevels[regionId]
         || []).findIndex(d => (d.id === adminLevelId));
 

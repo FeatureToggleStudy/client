@@ -30,6 +30,7 @@ const logout = () => initialSiloDomainData;
 
 // NOTE: Only sets new active project id in this reducer
 const setUserProjects = (state, action) => {
+    // FIXME: reading state
     const { activeProject: activeProjectId } = state;
     const { projects } = action;
 
@@ -45,6 +46,7 @@ const setUserProjects = (state, action) => {
 
 const setActiveProject = (state, action) => {
     const { activeProject } = action;
+    // FIXME: writing dual state
     const settings = {
         activeProject: { $set: activeProject },
         leadPage: { $auto: {

@@ -77,6 +77,7 @@ const emptyList = [];
 
 const leadViewSetFilter = (state, action) => {
     const { filters } = action;
+    // FIXME: reading state
     const { activeProject } = state;
     const settings = {
         leadPage: {
@@ -114,7 +115,9 @@ const leadViewUnsetFilter = (state) => {
 
 const leadViewSetActivePage = (state, action) => {
     const { activePage } = action;
+    // FIXME: reading state
     const { activeProject } = state;
+    // FIXME: reading state
     const view = getView(state);
     const settings = {
         leadPage: {
@@ -130,7 +133,9 @@ const leadViewSetActivePage = (state, action) => {
 
 const leadViewSetActiveSort = (state, action) => {
     const { activeSort } = action;
+    // FIXME: reading state
     const { activeProject } = state;
+    // FIXME: reading state
     const view = getView(state);
     const settings = {
         leadPage: {
@@ -157,7 +162,9 @@ const leadViewSetView = (state, action) => {
 
 const leadViewSetLeadsPerPage = (state, action) => {
     const { leadsPerPage } = action;
+    // FIXME: reading state
     const { activeProject } = state;
+    // FIXME: reading state
     const view = getView(state);
     const settings = {
         leadPage: {
@@ -173,8 +180,10 @@ const leadViewSetLeadsPerPage = (state, action) => {
 };
 
 const setLeads = (state, action) => {
-    const { activeProject } = state;
     const { leads, totalLeadsCount } = action;
+    // FIXME: reading state
+    const { activeProject } = state;
+    // FIXME: reading state
     const view = getView(state);
     const settings = {
         leadPage: {
@@ -190,9 +199,11 @@ const setLeads = (state, action) => {
 };
 
 const appendLeads = (state, action) => {
+    // FIXME: reading state
     const { activeProject } = state;
-    const { leads, totalLeadsCount } = action;
+    // FIXME: reading state
     const view = getView(state);
+    const { leads, totalLeadsCount } = action;
 
     const settings = {
         leadPage: {
@@ -208,8 +219,10 @@ const appendLeads = (state, action) => {
 };
 
 const removeLead = (state, action) => {
+    // FIXME: reading state
     const { activeProject } = state;
     const { lead } = action;
+    // FIXME: reading state
     const { totalLeadsCount } = state.leadPage[activeProject];
 
     const settings = {
@@ -233,6 +246,7 @@ const removeLead = (state, action) => {
 };
 
 const patchLead = (state, action) => {
+    // FIXME: reading state
     const { activeProject, leadPage } = state;
     const { lead } = action;
 
