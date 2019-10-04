@@ -9,10 +9,6 @@ import {
 import Icon from '#rscg/Icon';
 import SortableListView from '#rscv/SortableListView';
 import DangerConfirmButton from '#rsca/ConfirmButton/DangerConfirmButton';
-import Modal from '#rscv/Modal';
-import ModalBody from '#rscv/Modal/Body';
-import ModalFooter from '#rscv/Modal/Footer';
-import ModalHeader from '#rscv/Modal/Header';
 import NonFieldErrors from '#rsci/NonFieldErrors';
 import PrimaryButton from '#rsca/Button/PrimaryButton';
 import AccentButton from '#rsca/Button/AccentButton';
@@ -565,7 +561,7 @@ export default class Matrix2dEditWidget extends React.PureComponent {
         const TabsWithButton = this.renderTabsWithButton;
 
         return (
-            <div>
+            <div className={styles.editModal}>
                 <h2>{title}</h2>
                 <Faram
                     className={styles.form}

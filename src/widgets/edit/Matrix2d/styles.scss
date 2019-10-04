@@ -1,7 +1,3 @@
-:root {
-    --height-edit-modal: 70vh;
-}
-
 .item {
     display: flex;
     align-items: stretch;
@@ -23,8 +19,7 @@
 }
 
 .edit-modal {
-    width: var(--width-modal-large);
-    height: var(--height-edit-modal);
+    background-color: var(--color-foreground);
     overflow: auto;
 
     .form {
